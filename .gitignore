@@ -1,0 +1,3 @@
+# Exclude all plugins except Vundle
+vim/bundle/*
+!vim/bundle/vundle
