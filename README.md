@@ -1,6 +1,6 @@
 # Power.Vim
 
-My new improved vim configuration
+My new and improved vim configuration.
 
 ## Installation
 
