@@ -22,7 +22,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 Plugin 'flazz/vim-colorschemes'
-Plugin 'wincent/Command-T'
+Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
 
@@ -60,6 +60,7 @@ set laststatus=2
 
 " \ is the leader character
 let mapleader = "\\"
+nnoremap <Leader>w :w<CR>
 
 " Color scheme
 set t_Co=256
@@ -67,8 +68,8 @@ colorscheme jellybeans
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-" Command-T
-let g:CommandTMaxHeight = 10
+" CtrlP
+map <Leader>p :CtrlP<CR>
 
 " Fugitive
 autocmd QuickFixCmdPost *grep* cwindow
