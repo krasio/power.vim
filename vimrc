@@ -25,6 +25,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
+Plugin 'sunaku/vim-ruby-minitest'
+Plugin 'tomtom/tcomment_vim'
 
 filetype plugin indent on
 
@@ -82,6 +84,9 @@ map <Leader>v :Eview
 map <Leader>u :Eunittest 
 command! Eroutes :e config/routes.rb
 command! ETroutes :tabe config/routes.rb
+
+" MiniTest
+set completefunc=syntaxcomplete#Complete
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
