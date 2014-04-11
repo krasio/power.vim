@@ -6,6 +6,7 @@ My new and improved vim configuration.
 
 ```
 $ git clone git@github.com:krasio/power.vim.git
+$ cd power.vim
 $ git submodule init
 $ git submodule update
 $ scripts/switch-to-power-vim.sh
