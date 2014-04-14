@@ -83,8 +83,13 @@ map <Leader>m :Emodel
 map <Leader>c :Econtroller 
 map <Leader>v :Eview 
 map <Leader>u :Eunittest 
+map <Leader>tm :Tmodel 
+map <Leader>tc :Tcontroller 
+map <Leader>tv :Tview 
+map <Leader>tu :Tunittest 
 command! Eroutes :e config/routes.rb
 command! ETroutes :tabe config/routes.rb
+map [f <ESC>:A<CR>
 
 " MiniTest
 set completefunc=syntaxcomplete#Complete
@@ -127,5 +132,8 @@ set smartcase
 inoremap <C-k> <%=  %><Left><Left><Left><Left>
 inoremap <C-j> <%  %><Left><Left><Left><Left>
 inoremap <C-l> #{}<Left>
+
+" Gemfile
+au BufNewFile,BufRead Gemfile set filetype=ruby
 
 set modifiable
