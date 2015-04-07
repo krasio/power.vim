@@ -28,6 +28,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'fatih/vim-go'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'elixir-lang/vim-elixir'
 
 filetype plugin indent on
 
@@ -96,6 +99,10 @@ set completefunc=syntaxcomplete#Complete
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
+" Hide line numbers
+map <Leader>nn :set nonumber <CR>
+" Show line numbers
+map <Leader>sn :set number <CR>
 
 " Maps autocomplete to tab
 imap <Tab> <C-N>
