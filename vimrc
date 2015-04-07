@@ -99,10 +99,8 @@ set completefunc=syntaxcomplete#Complete
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
-" Hide line numbers
-map <Leader>nn :set nonumber <CR>
-" Show line numbers
-map <Leader>sn :set number <CR>
+" Toggle line numbers
+nnoremap <Leader>ln :set nonumber! <CR>
 
 " Maps autocomplete to tab
 imap <Tab> <C-N>
