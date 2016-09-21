@@ -31,6 +31,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'vim-airline/vim-airline'
+Plugin 'lambdatoast/elm.vim'
 
 filetype plugin indent on
 
@@ -85,10 +87,12 @@ map <Leader>g :Ggrep
 map <Leader>m :Emodel 
 map <Leader>c :Econtroller 
 map <Leader>v :Eview 
+map <Leader>s :Eservice 
 map <Leader>u :Eunittest 
 map <Leader>tm :Tmodel 
 map <Leader>tc :Tcontroller 
 map <Leader>tv :Tview 
+map <Leader>ts :Tservice 
 map <Leader>tu :Tunittest 
 command! Eroutes :e config/routes.rb
 command! ETroutes :tabe config/routes.rb
@@ -141,4 +145,11 @@ inoremap <C-l> #{}<Left>
 " Gemfile
 au BufNewFile,BufRead Gemfile set filetype=ruby
 
+
+" Open markdown files with Chrome.
+autocmd BufEnter *.md exe 'noremap <F5> :!open -a "Google Chrome.app" %:p<CR>'
+
 set modifiable
+
+" set laststatus=2
+let g:airline_theme='ubaryd'
