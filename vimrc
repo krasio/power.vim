@@ -32,7 +32,8 @@ Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-airline/vim-airline'
-Plugin 'lambdatoast/elm.vim'
+Plugin 'elmcast/elm-vim'
+Plugin 'avh4/elm-format'
 
 filetype plugin indent on
 
@@ -69,6 +70,10 @@ set laststatus=2
 " \ is the leader character
 let mapleader = "\\"
 nnoremap <Leader>w :w<CR>
+noremap <Leader><Left> <C-w><Left>
+noremap <Leader><Right> <C-w><Right>
+noremap <Leader><Up> <C-w><Up>
+noremap <Leader><Down> <C-w><Down>
 
 " Color scheme
 set t_Co=256
@@ -153,3 +158,6 @@ set modifiable
 
 " set laststatus=2
 let g:airline_theme='ubaryd'
+
+" elm-format
+let g:elm_format_autosave = 1
