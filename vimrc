@@ -30,8 +30,9 @@ Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'fatih/vim-go'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elmcast/elm-vim'
 Plugin 'avh4/elm-format'
 
@@ -161,3 +162,7 @@ let g:airline_theme='ubaryd'
 
 " elm-format
 let g:elm_format_autosave = 1
+
+" Autoformat Elixir files on save
+autocmd BufWritePre *.exs :normal gggqG
+autocmd BufWritePre *.ex :normal gggqG
