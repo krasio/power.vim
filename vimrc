@@ -9,6 +9,8 @@ set history=50 " keep 50 lines of command line history
 set ruler      " show the cursor position all the time
 set showcmd    " display incomplete commands
 set incsearch  " do incremental searching
+set splitbelow
+set splitright
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -71,10 +73,15 @@ set laststatus=2
 " \ is the leader character
 let mapleader = "\\"
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x :x<CR>
 noremap <Leader><Left> <C-w><Left>
 noremap <Leader><Right> <C-w><Right>
 noremap <Leader><Up> <C-w><Up>
 noremap <Leader><Down> <C-w><Down>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Color scheme
 set t_Co=256
@@ -163,6 +170,6 @@ let g:airline_theme='ubaryd'
 " elm-format
 let g:elm_format_autosave = 1
 
-" Autoformat Elixir files on save
-autocmd BufWritePre *.exs :normal gggqG
-autocmd BufWritePre *.ex :normal gggqG
+" Tab left/right
+nnoremap . gt
+nnoremap , gT
